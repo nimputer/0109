@@ -1,0 +1,72 @@
+1\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+    $(function(){
+        $("nav a").click(function(){
+            var _link = $(this).data("link");
+            var _offset = $("#" + _link).offset().top;
+            $("html,body").animate({
+                scrollTop: _offset
+                                   
+                                   
+    });
+            
+       
+    });
+    
+    })
+    
+    </script>
+    
+<style>
+    
+    #about, 
+    #works,
+    #service,
+    #contact {
+        height: 1000px;
+    }
+    
+    #about {
+        background-color: red;
+    }
+    
+    #works {
+        background-color: burlywood;
+    }
+    
+    #service {
+        background-color: darkolivegreen;
+    }
+    
+    #contact {
+        background-color: deeppink;
+        
+    }
+    
+    </style>
+    
+    
+</head>
+<body>
+    
+</body>
+<nav>
+    <a href ="#" data-link="about">about</a>
+    <a href ="#" data-link="works">works</a>
+    <a href ="#" data-link="service">service</a>
+    <a href ="#" data-link="contact">contact</a>   
+</nav>
+<div id="about"></div>
+<div id="works"></div>
+<div id="service"></div>
+<div id="contact"></div>
+
+
+
+</html>
